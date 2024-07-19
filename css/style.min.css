@@ -106,7 +106,21 @@ section {
   width: 2vw;
   min-width: 30px;
 }
-
+.sword-icons{
+  width: 2.5vw;
+  min-width: 30px;
+}
+.github-icons{
+  width: 3vw;
+  min-width: 30px;
+}
+.blockchain-icons{
+  width: 3vw;
+  min-width: 30px;
+}
+.border-image {
+  border: 5px solid #fff; /* You can change the px value for width and #000 for the color */
+}
 .jumbotron {
   color: #fff;
   padding-top: 80px;
@@ -150,10 +164,66 @@ section {
     opacity: 0;
     animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
     animation-delay: .8s; }
+    
 
 .jumbotron-single h1 {
   font-size: 3rem !important; }
 
+#sicko{
+  color: #fff;
+  padding-top: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+  line-height: .9;
+  font-weight: bold;
+  display: inline-block;
+  /*border: 15px solid #fff;*/
+  font-size: 4rem;
+  opacity: 0;
+  animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+  animation-delay: .8s; 
+}
+.sicko{
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 10vh;
+  line-height: 1.1;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 2rem;
+  opacity: 0;
+  animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+  animation-delay: .8s; 
+}
+p.sicko, ul.sicko, li.sicko, p.sicko2{
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+}
+p.blurb{
+  font-size: 1.2rem !important;
+  margin-bottom: 0px !important;
+  padding-top: 1vh;
+}
+.sicko2{
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 10vh;
+  line-height: 1.1;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 2rem;
+  opacity: 0;
+  animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+  animation-delay: .8s; 
+
+}
+.project-link{
+  color: #fff;
+}
 .overlay {
   color: #fff; }
   .overlay:before {
