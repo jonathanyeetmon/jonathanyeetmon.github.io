@@ -23,6 +23,12 @@ body {
   min-width: 300px; /* Set a minimum size for small screens */
 }
 
+.responsive-h1 {
+  font-size: 4rem; /* Default font size for larger screens */
+  transition: font-size 0.3s ease; /* Smooth transition */
+}
+
+
 h1,
 h2,
 h3,
@@ -145,41 +151,86 @@ section {
   overflow: hidden;
   min-height: 100vh;
   z-index: 1; /* Keep this layer in front */ }
-  @media (max-width: 767px) and (orientation: landscape) {
-    .jumbotron {
-      min-height: 500px; } }
-  .jumbotron .container {
-    position: relative;
-    z-index: 1; }
-  .jumbotron:before {
-    position: absolute;
-    display: block;
-    content: "";
-    opacity: 0.8;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #ff00cc;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333399, #ff00cc);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333399, #ff00cc);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  .jumbotron h1 {
-    line-height: .9;
-    font-weight: bold;
-    display: inline-block;
-    /*border: 15px solid #fff;*/
-    padding: 30px;
-    font-size: 9rem;
-    opacity: 0;
-    animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
-    animation-delay: .8s; }
-    
+  /* Existing Media Query for Landscape Orientation on Small Devices */
+@media (max-width: 767px) and (orientation: landscape) {
+  .jumbotron {
+      min-height: 500px;
+  }
+}
 
+/* Jumbotron Container Styling */
+.jumbotron .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Jumbotron Background Gradient */
+.jumbotron:before {
+  position: absolute;
+  display: block;
+  content: "";
+  opacity: 0.8;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ff00cc;
+  /* Fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #333399, #ff00cc);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Jumbotron H1 Styling */
+.jumbotron h1 {
+  line-height: 0.9;
+  font-weight: bold;
+  display: inline-block;
+  /* Optional Border and Padding (Commented Out) */
+  /* border: 15px solid #fff; */
+  /* padding: 30px; */
+  font-size: 9rem;
+  opacity: 0;
+  animation: 1s fadeInFromTop cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s forwards;
+  animation-delay: 0.8s;
+  transition: font-size 0.3s ease; /* Smooth transition for font size changes */
+}
+
+/* Responsive Font Sizes for H1 */
+@media (max-width: 1200px) { /* Extra Large Devices (Optional) */
+  .jumbotron h1 {
+      font-size: 8rem;
+  }
+}
+
+@media (max-width: 992px) { /* Large Devices (Desktops, Tablets) */
+  .jumbotron h1 {
+      font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) { /* Medium Devices (Large Tablets, Small Desktops) */
+  .jumbotron h1 {
+      font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 576px) { /* Small Devices (Phones) */
+  .jumbotron h1 {
+      font-size: 3rem;
+  }
+}
+
+/* Container Text Centering */
+.container.text-center {
+  width: 100%;
+}
+
+/* Jumbotron Single H1 Styling (Ensure Specificity if Needed) */
 .jumbotron-single h1 {
-  font-size: 3rem !important; }
+  font-size: 3rem !important;
+}
 
 #sicko{
   color: #fff;
@@ -854,8 +905,8 @@ p.blurb{
     padding: 10px; } }
 
 @media (max-width: 767px) {
-  .jumbotron h1 {
-    font-size: 6rem; }
+  /* .jumbotron h1 {
+    font-size: 6rem; } */
   .grid-item {
     width: 100%; }
   .progress {
