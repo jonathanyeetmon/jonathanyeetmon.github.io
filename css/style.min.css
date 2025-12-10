@@ -135,6 +135,10 @@ section {
   width: 3vw;
   min-width: 30px;
 }
+.thread-icons{
+  width: 5vw;
+  min-width: 30px;
+}
 .border-image {
   border: 5px solid #fff; /* You can change the px value for width and #000 for the color */
 }
